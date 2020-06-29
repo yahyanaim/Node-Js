@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    
+   
+    <style>@charset "UTF-8";
+        @import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,700&display=swap");
+        @import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,700&display=swap");
+        * {
+          margin: 10px;
+          padding: 0;
+        }
+        
+        body {
+          font-family: 'Roboto', sans-serif;
+          background-image: url("./img/img.jpg");
+        }
+        
+       
+       .titre
+       {
+        
+
+margin-top: 15px;
+margin-right: 15px;
+margin-bottom: 15px;
+margin-left: 15px;
+
+padding: 0;
+
+font-size: 20px;
+
+font-family: 'Open Sans', sans-serif;
+
+
+color: #4B3049
+}
+       
+        .contenu {
+          width: 37%;
+          height: 400px;
+          margin-left: auto;
+          margin-right: auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          background: #ebe8ec;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          -webkit-box-shadow: 3px 7px 25px 10px rgba(0, 0, 0, 0.1);
+                  box-shadow: 3px 7px 25px 10px rgba(0, 0, 0, 0.1);
+          /* & .pure-button{
+            background: white;
+            width: 20%;
+            border: 1px solid black;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+            
+        &:hover{
+            background-color: #ffc400;
+        }
+        } */
+        }
+        
+        .contenu form {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -ms-flex-line-pack: center;
+              align-content: center;
+          text-align: center;
+        }
+        
+        .contenu legend {
+          font-size: 30px;
+          text-align: center;
+          margin-top: 50px;
+          margin-bottom: 30px;
+          letter-spacing: 5px;
+        }
+        
+        .contenu input, .contenu select {
+          background: #f2f2f2;
+          width: 50%;
+          border: 0;
+          margin: 0 0 15px;
+          padding: 15px;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          font-size: 14px;
+          text-transform: uppercase;
+        }
+        
+        .button.type2 {
+          color: black;
+          height: 38px;
+          width: 36%;          
+          border: 0px;
+          font-size: 15px;
+          border: solid 2px gray;
+        }
+        
+        .button.type2:after,
+        .button.type2:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: black;
+       
+        }
+        
+        .button.type2:hover:before {
+          top: 0;
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+        
+        .button.type2:hover:after {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+        
+        /* media query  */
+        @media screen and (max-width: 850px) {
+          .contenu {
+            width: 90%;
+            margin-top: 80px;
+          }
+          .button.type2 {
+            width: 30%;
+          }
+        }
+        
+        .dateBirth {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          width: 50%;
+        }
+        
+        #JJ, #MM {
+          width: 25%;
+        }
+        /*# sourceMappingURL=Reservation.css.map */</style>
+    <title>Réservation</title>
+
+</head>
+<body>
+    
+
+    
+
+    
+        <div class="contenu">
+            <form class="pure-form">
+    
+                   <!--  <legend>Inscris-toi</legend>-->
+                <span><titre class="titre">RESEVRATION</titre></span>
+                <select  id="taillpillow">
+                    <option>-- SHOP PILLOW --</option>
+                    <option value="SMALL">SMALL</option>
+                    <option value="BIG">BIG</option>
+                    <option value="LARGE">LARGE</option>
+                </select>
+                     
+                <input type="text" placeholder="NAME" id="nom" required>
+                <input type="text" placeholder="NUMBER OF PILLOW" id="nbr" required>
+                
+
+               
+                <!--  <button type="submit" class="pure-button pure-button-primary"><i class="fas fa-check"></i>&emsp;Confirm</button> -->
+               
+<!--
+     <button class="button type2" id="but_submit2" style="position: absolute; top: 300px;" onclick="age();">
+                    <i class="fas fa-check"></i>&emsp;reservez
+                </button>
+-->
+                <input type="button" id="but_submit2" class="fadeIn fourth" value="reserve">
+           
+            </form>
+
+        </div>
+        <div id="monSpan" style="position: relative; top: 200px;"></div>
+
+    
+<!--
+    
+        <script>
+            
+            //création de variables
+          
+            //création de la fonction
+            function age(){
+            var shoppillow = document.getElementById("mySelect").value;
+            var nom = document.getElementById("nom").value;
+            var NUMPIL = document.getElementById("NbrL").value;
+
+            confirm("the size of your pillow: "+shoppillow+"\n"+"Your Name is: " +nom+"\n"+"NUMBER OF PILLOW: "+NUMPIL);
+        }
+            
+        </script>
+        
+-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+      <script src="./js/Reservation.js"></script>
+
+
+</body>
+</html>
